@@ -669,7 +669,7 @@ Move this to a future release v0.4.0
 			trades: function(symbols, callback) {
 				for ( let symbol of symbols ) {
 					let reconnect = function() {
-						if ( options.reconnect ) subscribe(symbol.toLowerCase()+'@aggTrade', callback);
+						if ( options.reconnect ) subscribe(symbol.toLowerCase()+'@trade', callback);
 					};
 					subscribe(symbol.toLowerCase()+'@aggTrade', callback, reconnect);
 				}
